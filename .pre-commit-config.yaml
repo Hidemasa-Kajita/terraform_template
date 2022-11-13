@@ -1,0 +1,29 @@
+default_stages: [commit]
+repos:
+    - repo: https://github.com/antonbabenko/pre-commit-terraform
+      rev: v1.76.0
+      # hooks の詳しい内容については、以下参照.
+      # https://github.com/antonbabenko/pre-commit-terraform#available-hooks
+      hooks:
+          # フォーマット.
+          - id: terraform_fmt
+          # セキュリティ的に問題ないかチェック.
+          - id: terraform_validate
+          # セキュリティ的に問題ないかチェック.
+          - id: terraform_tfsec
+          # セキュリティ的に問題ないかチェック.
+          - id: terrascan
+          # lint.
+          - id: terraform_tflint
+          # コストの算出.
+          - id: infracost_breakdown
+            args:
+              - --args=--path=./
+              - --args=--terraform-var-file="terraform.tfvars"
+            verbose: true
+          # ドキュメントの作成.
+          - id: terraform_docs
+            args:
+              - --hook-config=--path-to-file=README.md
+              - --hook-config=--add-to-existing-file=true
+              - --hook-config=--create-file-if-not-exist=true

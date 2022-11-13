@@ -1,0 +1,7 @@
+terraform.tfvars
+.terraform
+.ssh
+.cloudfront_public_key
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.tfstate.lock.info
