@@ -1,5 +1,19 @@
 default_stages: [commit]
+fail_fast: true
 repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v3.3.0
+      hooks:
+        - id: check-json
+        - id: check-yaml
+        - id: detect-aws-credentials
+          args: [--allow-missing-credentials]
+        - id: detect-private-key
+        - id: end-of-file-fixer
+        - id: no-commit-to-branch
+          args: [--branch, main]
+        - id: pretty-format-json
+          args: [--autofix]
     - repo: https://github.com/antonbabenko/pre-commit-terraform
       rev: v1.76.0
       # hooks の詳しい内容については、以下参照.
@@ -13,6 +27,7 @@ repos:
           - id: terraform_tfsec
           # セキュリティ的に問題ないかチェック.
           - id: terrascan
+            verbose: true
           # lint.
           - id: terraform_tflint
           # コストの算出.
