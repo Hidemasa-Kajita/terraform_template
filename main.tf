@@ -1,15 +1,15 @@
-variable "tags" {
-
-}
-
 locals {
-  env = module.env.this
+  config = module.config.this
 
-  network = local.env.network
+  env         = var.env
+  network     = local.config.network
+  default_tag = local.config.default_tag
 }
 
-module "env" {
-  source = "./env"
+module "config" {
+  source = "./config"
+
+  env = local.env
 }
 
 resource "aws_vpc" "this" {
@@ -23,7 +23,7 @@ resource "aws_vpc" "this" {
     {
       Name = "${local.network.vpc.name}-vpc"
     },
-    var.tags,
+    local.default_tag,
   )
 }
 
@@ -34,6 +34,6 @@ resource "aws_internet_gateway" "this" {
     {
       Name = "${local.network.vpc.name}-vpc-igw"
     },
-    var.tags
+    local.default_tag,
   )
 }

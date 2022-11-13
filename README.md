@@ -24,7 +24,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_env"></a> [env](#module\_env) | ./env | n/a |
+| <a name="module_config"></a> [config](#module\_config) | ./config | n/a |
 
 ## Resources
 
@@ -38,7 +38,7 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_key"></a> [aws\_key](#input\_aws\_key) | AWS Keys | <pre>object({<br>    access_key = string<br>    secret_key = string<br>  })</pre> | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `any` | n/a | yes |
+| <a name="input_env"></a> [env](#input\_env) | enviroment | `string` | n/a | yes |
 
 ## Outputs
 

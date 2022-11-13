@@ -6,3 +6,8 @@ variable "aws_key" {
   sensitive   = true
   description = "AWS Keys"
 }
+
+variable "env" {
+  type        = string
+  description = "enviroment"
+}

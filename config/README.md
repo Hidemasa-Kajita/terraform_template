@@ -21,7 +21,9 @@ No resources.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_env"></a> [env](#input\_env) | enviroment | `string` | n/a | yes |
 
 ## Outputs
 
