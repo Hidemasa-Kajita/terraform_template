@@ -1,4 +1,6 @@
-# env
+# config
+
+環境ごとの設定値を管理するモジュール。
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
