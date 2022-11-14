@@ -1,6 +1,7 @@
 # config
 
 環境ごとの設定値を管理するモジュール。
+`terraform.tfvars`で管理している値は、直接参照せずに、`config`module を経由する.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

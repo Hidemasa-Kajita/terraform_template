@@ -23,6 +23,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_config"></a> [config](#module\_config) | ./config | n/a |
+| <a name="module_domain"></a> [domain](#module\_domain) | ./domain | n/a |
 | <a name="module_network"></a> [network](#module\_network) | ./network | n/a |
 
 ## Resources
@@ -34,6 +35,7 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_key"></a> [aws\_key](#input\_aws\_key) | AWS Keys | <pre>object({<br>    access_key = string<br>    secret_key = string<br>  })</pre> | n/a | yes |
+| <a name="input_domain"></a> [domain](#input\_domain) | root and sub domain name from "名前.com" | <pre>object({<br>    root = string<br>    sub  = string<br>  })</pre> | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | enviroment | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | aws region | `string` | n/a | yes |
 
