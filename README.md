@@ -16,22 +16,18 @@
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.39.0 |
+No providers.
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_config"></a> [config](#module\_config) | ./config | n/a |
+| <a name="module_network"></a> [network](#module\_network) | ./network | n/a |
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_internet_gateway.this](https://registry.terraform.io/providers/hashicorp/aws/4.39.0/docs/resources/internet_gateway) | resource |
-| [aws_vpc.this](https://registry.terraform.io/providers/hashicorp/aws/4.39.0/docs/resources/vpc) | resource |
+No resources.
 
 ## Inputs
 

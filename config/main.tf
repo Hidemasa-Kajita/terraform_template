@@ -1,3 +1,8 @@
+variable "env" {
+  type        = string
+  description = "enviroment"
+}
+
 module "locals" {
   source = "./locals"
   env    = var.env
