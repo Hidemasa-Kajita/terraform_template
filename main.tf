@@ -4,6 +4,7 @@ locals {
   env         = var.env
   network     = local.config.network
   default_tag = local.config.default_tag
+  domain      = var.domain
 }
 
 module "config" {
@@ -17,4 +18,10 @@ module "network" {
 
   network     = local.network
   default_tag = local.default_tag
+}
+
+module "domain" {
+  source = "./domain"
+
+  domain = var.domain
 }
