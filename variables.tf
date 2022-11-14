@@ -14,6 +14,7 @@ variable "env" {
 
 variable "region" {
   type        = string
+  sensitive   = true
   description = "aws region"
 }
 
@@ -22,5 +23,6 @@ variable "domain" {
     root = string
     sub  = string
   })
+  sensitive   = true
   description = "root and sub domain name from \"名前.com\""
 }

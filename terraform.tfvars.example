@@ -1,0 +1,13 @@
+env = "dev"
+
+region = ""
+
+aws_key = {
+  access_key = ""
+  secret_key = ""
+}
+
+domain = {
+  root = ""
+  sub  = ""
+}
