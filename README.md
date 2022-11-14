@@ -35,6 +35,7 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_key"></a> [aws\_key](#input\_aws\_key) | AWS Keys | <pre>object({<br>    access_key = string<br>    secret_key = string<br>  })</pre> | n/a | yes |
 | <a name="input_env"></a> [env](#input\_env) | enviroment | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | aws region | `string` | n/a | yes |
 
 ## Outputs
 

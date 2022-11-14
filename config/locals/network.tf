@@ -1,6 +1,4 @@
 locals {
-  // TODO: 別のところ移動したい.
-  region = "ap-northeast-1"
   network = {
     vpc = {
       name = "app"

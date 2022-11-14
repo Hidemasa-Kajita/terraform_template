@@ -11,3 +11,8 @@ variable "env" {
   type        = string
   description = "enviroment"
 }
+
+variable "region" {
+  type        = string
+  description = "aws region"
+}
