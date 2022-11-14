@@ -1,7 +1,3 @@
-.cloudfront_public_key を作成して、openssl コマンドで公開鍵と秘密鍵を作成
-
-.ssh/api_server&step_server を作成して、ssh-keygen コマンドで公開鍵と秘密鍵を作成(ファイル名は、`key.pub`, `key`)
-
 ## install
 - tfenv
 - tflint
@@ -9,3 +5,39 @@
 - terrascan
 - pre-commit
 - infracost
+- terraform-docs
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.3.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.39.0 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_config"></a> [config](#module\_config) | ./config | n/a |
+| <a name="module_network"></a> [network](#module\_network) | ./network | n/a |
+
+## Resources
+
+No resources.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_aws_key"></a> [aws\_key](#input\_aws\_key) | AWS Keys | <pre>object({<br>    access_key = string<br>    secret_key = string<br>  })</pre> | n/a | yes |
+| <a name="input_env"></a> [env](#input\_env) | enviroment | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | aws region | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
