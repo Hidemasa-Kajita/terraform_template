@@ -1,5 +1,6 @@
 locals {
-  domain = var.domain
+  domain      = var.domain
+  default_tag = var.default_tag
 
   root_domain = local.domain.root
   sub_domain  = local.domain.sub
@@ -7,8 +8,4 @@ locals {
 
 resource "aws_route53_zone" "root" {
   name = local.root_domain
-}
-
-resource "aws_route53_zone" "sub" {
-  name = local.sub_domain
 }

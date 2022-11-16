@@ -5,6 +5,7 @@ locals {
   network     = local.config.network
   default_tag = local.config.default_tag
   domain      = var.domain
+  aws_key     = var.aws_key
 }
 
 module "config" {
@@ -23,5 +24,11 @@ module "network" {
 module "domain" {
   source = "./domain"
 
-  domain = var.domain
+  domain      = local.domain
+  default_tag = local.default_tag
+
+  providers = {
+    aws          = aws
+    aws.virginia = aws.virginia
+  }
 }
