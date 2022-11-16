@@ -24,7 +24,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_default_tag"></a> [default\_tag](#input\_default\_tag) | default tag | <pre>object({<br>    Env        = string<br>    Managed_by = string<br>  })</pre> | n/a | yes |
+| <a name="input_default_tags"></a> [default\_tags](#input\_default\_tags) | default tags | <pre>object({<br>    Env        = string<br>    Managed_by = string<br>  })</pre> | n/a | yes |
 | <a name="input_network"></a> [network](#input\_network) | network configuration | <pre>object({<br>    vpc = object({<br>      name = string<br>      cidr = string<br>    })<br>  })</pre> | n/a | yes |
 
 ## Outputs

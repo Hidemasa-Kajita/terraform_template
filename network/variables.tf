@@ -8,10 +8,10 @@ variable "network" {
   description = "network configuration"
 }
 
-variable "default_tag" {
+variable "default_tags" {
   type = object({
     Env        = string
     Managed_by = string
   })
-  description = "default tag"
+  description = "default tags"
 }

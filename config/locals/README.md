@@ -27,6 +27,6 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_default_tag"></a> [default\_tag](#output\_default\_tag) | n/a |
+| <a name="output_default_tags"></a> [default\_tags](#output\_default\_tags) | n/a |
 | <a name="output_network"></a> [network](#output\_network) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

@@ -1,7 +1,7 @@
 locals {
-  vpc_id      = var.vpc_id
-  name        = var.name
-  default_tag = var.default_tag
+  vpc_id       = var.vpc_id
+  name         = var.name
+  default_tags = var.default_tags
 }
 
 resource "aws_internet_gateway" "this" {
@@ -11,6 +11,6 @@ resource "aws_internet_gateway" "this" {
     {
       Name = "${local.name}-vpc-igw"
     },
-    local.default_tag,
+    local.default_tags,
   )
 }

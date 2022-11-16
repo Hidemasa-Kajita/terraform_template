@@ -1,6 +1,6 @@
 locals {
-  domain      = var.domain
-  default_tag = var.default_tag
+  domain       = var.domain
+  default_tags = var.default_tags
 
   root_domain = local.domain.root
   sub_domain  = local.domain.sub

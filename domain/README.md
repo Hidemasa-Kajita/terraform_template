@@ -29,7 +29,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_default_tag"></a> [default\_tag](#input\_default\_tag) | default tag | <pre>object({<br>    Env        = string<br>    Managed_by = string<br>  })</pre> | n/a | yes |
+| <a name="input_default_tags"></a> [default\_tags](#input\_default\_tags) | default tags | <pre>object({<br>    Env        = string<br>    Managed_by = string<br>  })</pre> | n/a | yes |
 | <a name="input_domain"></a> [domain](#input\_domain) | root and sub domain name | <pre>object({<br>    root = string<br>    sub  = string<br>  })</pre> | n/a | yes |
 
 ## Outputs

@@ -26,7 +26,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cidr"></a> [cidr](#input\_cidr) | vpc cidr block | `string` | n/a | yes |
-| <a name="input_default_tag"></a> [default\_tag](#input\_default\_tag) | default tag | <pre>object({<br>    Env        = string<br>    Managed_by = string<br>  })</pre> | n/a | yes |
+| <a name="input_default_tags"></a> [default\_tags](#input\_default\_tags) | default tags | <pre>object({<br>    Env        = string<br>    Managed_by = string<br>  })</pre> | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | vpc name prefix | `string` | n/a | yes |
 
 ## Outputs

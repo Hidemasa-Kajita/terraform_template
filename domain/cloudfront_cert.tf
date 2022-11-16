@@ -5,11 +5,11 @@ provider "aws" {
 locals {
   domain_name     = var.domain.root
   route53_zone_id = aws_route53_zone.root.zone_id
-  tag = merge(
+  tags = merge(
     {
       Name = "${local.domain_name}-cert"
     },
-    var.default_tag,
+    var.default_tags,
   )
 }
 
@@ -26,7 +26,7 @@ resource "aws_acm_certificate" "cloudfront_cert" {
     create_before_destroy = true
   }
 
-  tags = local.tag
+  tags = local.tags
 }
 
 resource "aws_route53_record" "cloudfront_cert" {

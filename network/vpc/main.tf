@@ -1,7 +1,7 @@
 locals {
-  name        = var.name
-  cidr        = var.cidr
-  default_tag = var.default_tag
+  name         = var.name
+  cidr         = var.cidr
+  default_tags = var.default_tags
 }
 
 resource "aws_vpc" "this" {
@@ -15,6 +15,6 @@ resource "aws_vpc" "this" {
     {
       Name = "${local.name}-vpc"
     },
-    local.default_tag,
+    local.default_tags,
   )
 }
