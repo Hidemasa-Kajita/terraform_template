@@ -3,22 +3,20 @@ provider "aws" {
 }
 
 locals {
-  domain_name     = var.domain.root
-  route53_zone_id = aws_route53_zone.root.zone_id
   tags = merge(
     {
-      Name = "${local.domain_name}-cert"
+      Name = "${local.root_domain}-cert"
     },
-    var.default_tags,
+    local.default_tags,
   )
 }
 
 resource "aws_acm_certificate" "cloudfront_cert" {
   provider = aws.virginia
 
-  domain_name = local.domain_name
+  domain_name = local.root_domain
   subject_alternative_names = [
-    "*.${local.domain_name}"
+    "*.${local.root_domain}"
   ]
   validation_method = "DNS"
 
