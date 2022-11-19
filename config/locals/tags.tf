@@ -1,12 +1,12 @@
 locals {
-  default_tag = {
+  default_tags = {
     Env        = var.env
     Managed_by = "Terraform"
   }
 }
 
-output "default_tag" {
+output "default_tags" {
   value = {
-    this = local.default_tag
+    this = local.default_tags
   }
 }

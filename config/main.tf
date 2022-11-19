@@ -10,7 +10,7 @@ module "locals" {
 
 output "this" {
   value = {
-    network     = module.locals.network.this
-    default_tag = module.locals.default_tag.this
+    network      = module.locals.network.this
+    default_tags = module.locals.default_tags.this
   }
 }

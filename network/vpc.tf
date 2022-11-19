@@ -1,9 +1,3 @@
-locals {
-  name        = var.name
-  cidr        = var.cidr
-  default_tag = var.default_tag
-}
-
 resource "aws_vpc" "this" {
   #ts:skip=AWS.VPC.Logging.Medium.0470 TODO
   cidr_block           = local.cidr
@@ -15,6 +9,6 @@ resource "aws_vpc" "this" {
     {
       Name = "${local.name}-vpc"
     },
-    local.default_tag,
+    local.default_tags,
   )
 }
